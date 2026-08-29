@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { SectionIntro } from "./Section";
+import { galleryBaseUrl } from "../site-config";
 
 const tiles = [
-  { label: "Omakase Table", image: "/gallery/omakase-table.jpg" },
-  { label: "Nigiri Station", image: "/gallery/nigiri-station.jpg" },
-  { label: "Celebration Platter", image: "/gallery/celebration-platter.jpg" },
-  { label: "Corporate Catering", image: "/gallery/corporate-catering.jpg" },
-  { label: "Private Dinner", image: "/gallery/private-dinner.jpg" },
-  { label: "Wedding Reception", image: "/gallery/wedding-reception.jpg" },
+  { label: "Omakase Table", file: "omakase-table.jpg" },
+  { label: "Nigiri Station", file: "nigiri-station.jpg" },
+  { label: "Celebration Platter", file: "celebration-platter.jpg" },
+  { label: "Corporate Catering", file: "corporate-catering.jpg" },
+  { label: "Private Dinner", file: "private-dinner.jpg" },
+  { label: "Wedding Reception", file: "wedding-reception.jpg" },
 ];
 
 export default function Gallery() {
@@ -22,7 +23,7 @@ export default function Gallery() {
             style={{ aspectRatio: "4/5", position: "relative", overflow: "hidden" }}
           >
             <Image
-              src={tile.image}
+              src={`${galleryBaseUrl}/${tile.file}`}
               alt={tile.label}
               fill
               sizes="(max-width: 480px) 100vw, (max-width: 720px) 50vw, (max-width: 1220px) 33vw, 400px"
