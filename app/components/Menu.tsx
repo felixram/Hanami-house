@@ -77,7 +77,6 @@ export default function Menu() {
               display: "flex",
               flexDirection: "column",
               gap: 18,
-              border: "1px solid transparent",
             }}
           >
             {item.icon}

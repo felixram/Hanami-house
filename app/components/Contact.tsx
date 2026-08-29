@@ -4,7 +4,6 @@ import { useState, type FormEvent } from "react";
 import { Eyebrow, SectionHeading } from "./Section";
 
 const fieldStyle: React.CSSProperties = {
-  border: "1px solid oklch(96% 0.01 85 / 0.25)",
   padding: "14px 16px",
   background: "transparent",
 };
@@ -146,7 +145,7 @@ export default function Contact() {
               <rect x="3" y="5" width="18" height="14" rx="1.5" />
               <path d="M3.5 6.5 12 13l8.5-6.5" />
             </svg>
-            <a href="mailto:hello@hanamihouse.com" style={{ fontSize: "0.94rem", color: "var(--on-dark-soft)", lineHeight: 1.6 }}>hello@hanamihouse.com</a>
+            <a href="mailto:hello@hanami-house.com" style={{ fontSize: "0.94rem", color: "var(--on-dark-soft)", lineHeight: 1.6 }}>hello@hanami-house.com</a>
           </div>
           <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--accent)" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}>

@@ -47,6 +47,7 @@ a:hover {
 
 .nav-link {
   transition: color 0.2s ease;
+  color: var(--ink-soft);
 }
 .nav-link:hover {
   color: var(--accent);
@@ -55,6 +56,9 @@ a:hover {
 .btn-primary {
   transition: background-color 0.2s ease, border-color 0.2s ease;
   display: inline-block;
+  background-color: var(--ink);
+  border: 1px solid var(--ink);
+  color: var(--paper);
 }
 .btn-primary:hover {
   background-color: color-mix(in oklch, var(--accent) 70%, black 10%);
@@ -64,6 +68,7 @@ a:hover {
 .btn-secondary {
   transition: background-color 0.2s ease, color 0.2s ease;
   display: inline-block;
+  color: var(--ink);
 }
 .btn-secondary:hover {
   background-color: var(--dark);
@@ -72,6 +77,7 @@ a:hover {
 
 .menu-card {
   transition: border-color 0.2s ease;
+  border: 1px solid transparent;
 }
 .menu-card:hover {
   border-color: var(--accent);
@@ -86,6 +92,7 @@ a:hover {
 
 .field-box {
   transition: border-color 0.2s ease;
+  border: 1px solid oklch(96% 0.01 85 / 0.25);
 }
 .field-box:focus-within {
   border-color: var(--accent);
@@ -98,11 +105,26 @@ a:hover {
   opacity: 0.65;
 }
 
+.hero-section {
+  scroll-margin-top: 84px;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: clamp(56px, 8vw, 104px) clamp(24px, 5vw, 64px) clamp(72px, 9vw, 128px);
+}
 .hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 48px;
   align-items: center;
+}
+.hero-copy {
+  max-width: 40ch;
+  margin: 0 0 38px;
+}
+.hero-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .nav-links {
   display: flex;
@@ -151,8 +173,24 @@ a:hover {
   .nav-links {
     display: none;
   }
+  .hero-section {
+    padding-bottom: clamp(56px, 8vw, 104px);
+  }
   .hero-grid {
     grid-template-columns: 1fr;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-copy {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .hero-art {
+    display: none;
   }
   .philosophy-grid {
     grid-template-columns: 1fr;

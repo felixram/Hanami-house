@@ -32,13 +32,13 @@ export default function Nav() {
         </span>
       </a>
       <div className="nav-links">
-        <a href="#menu" className="nav-link" style={{ fontSize: "0.86rem", letterSpacing: "0.03em", color: "var(--ink-soft)" }}>
+        <a href="#menu" className="nav-link" style={{ fontSize: "0.86rem", letterSpacing: "0.03em" }}>
           Menu
         </a>
-        <a href="#philosophy" className="nav-link" style={{ fontSize: "0.86rem", letterSpacing: "0.03em", color: "var(--ink-soft)" }}>
+        <a href="#philosophy" className="nav-link" style={{ fontSize: "0.86rem", letterSpacing: "0.03em" }}>
           Philosophy
         </a>
-        <a href="#gallery" className="nav-link" style={{ fontSize: "0.86rem", letterSpacing: "0.03em", color: "var(--ink-soft)" }}>
+        <a href="#gallery" className="nav-link" style={{ fontSize: "0.86rem", letterSpacing: "0.03em" }}>
           Gallery
         </a>
       </div>
@@ -49,9 +49,6 @@ export default function Nav() {
           fontSize: "0.82rem",
           letterSpacing: "0.05em",
           padding: "11px 22px",
-          background: "var(--ink)",
-          color: "var(--paper)",
-          border: "1px solid var(--ink)",
         }}
       >
         Inquire

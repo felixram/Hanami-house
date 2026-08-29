@@ -1,16 +1,8 @@
 export default function Hero() {
   return (
-    <div
-      id="home"
-      style={{
-        scrollMarginTop: 84,
-        maxWidth: 1220,
-        margin: "0 auto",
-        padding: "clamp(56px,8vw,104px) clamp(24px,5vw,64px) clamp(72px,9vw,128px)",
-      }}
-    >
+    <div id="home" className="hero-section">
       <div className="hero-grid">
-        <div>
+        <div className="hero-content">
           <div
             style={{
               fontSize: "0.78rem",
@@ -38,29 +30,25 @@ export default function Hero() {
             for the occasion.
           </h1>
           <p
+            className="hero-copy"
             style={{
               fontSize: "1.08rem",
               lineHeight: 1.75,
               color: "var(--ink-muted)",
-              maxWidth: "40ch",
-              margin: "0 0 38px",
             }}
           >
             Hanami House brings chef-attended omakase and refined sushi catering to weddings,
             private dinners, and corporate events — each menu composed around what the season
             offers.
           </p>
-          <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+          <div className="hero-actions" style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
             <a
               href="#contact"
               className="btn-primary"
               style={{
                 padding: "15px 30px",
-                background: "var(--ink)",
-                color: "var(--paper)",
                 fontSize: "0.92rem",
                 letterSpacing: "0.02em",
-                border: "1px solid var(--ink)",
               }}
             >
               Inquire About Your Event
@@ -71,7 +59,6 @@ export default function Hero() {
               style={{
                 padding: "15px 30px",
                 border: "1px solid var(--ink)",
-                color: "var(--ink)",
                 fontSize: "0.92rem",
                 letterSpacing: "0.02em",
               }}
@@ -80,7 +67,7 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div className="hero-art">
           <svg viewBox="0 0 360 520" width="100%" style={{ maxWidth: 340, color: "oklch(58% 0.03 75)" }}>
             <defs>
               <symbol id="blossom" viewBox="-16 -16 32 32">
