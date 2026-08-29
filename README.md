@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Hanami House marketing site — a single-page Next.js app for a private/corporate sushi catering business.
 
-## Getting Started
-
-First, run the development server:
+## Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `NEXT_PUBLIC_SITE_URL` — the deployed site's URL (e.g. `https://hanamihouse.com`). Used for `robots.txt`, `sitemap.xml`, and social-share metadata. Falls back to `http://localhost:3000` if unset — set this on Vercel once a domain is live.
 
-## Learn More
+## Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `app/page.tsx` — assembles the page from the sections in `app/components/`
+- `app/api/contact/route.ts` — handles the contact form submission (currently logs to console; needs a real email integration — see below)
+- Gallery and Testimonials sections are currently un-rendered in `page.tsx` (Gallery has real photos ready in `public/gallery/`; Testimonials still has placeholder quotes)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Before launch
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Contact form delivery**: `app/api/contact/route.ts` only logs submissions to the server console — nothing is emailed or saved yet. Once the Google Workspace inbox is set up, this needs an actual send step (e.g. [Resend](https://resend.com)) targeting that address, plus an API key set as an environment variable.
+- **Testimonials**: re-enable `<Testimonials />` in `app/page.tsx` (and its nav link) once real client quotes replace the placeholders in `app/components/Testimonials.tsx`.
+- **Domain**: set `NEXT_PUBLIC_SITE_URL` in the deployment environment once a domain is chosen.
